@@ -1415,3 +1415,31 @@ console.log(members);
 
 </p>
 </details>
+
+
+###### 46. Що буде на виході?
+
+```javascript
+const person = {
+  name: 'Lydia',
+  age: 21,
+};
+
+for (const item in person) {
+  console.log(item);
+}
+```
+- A: `{ name: "Lydia" }, { age: 21 }`
+- B: `"name", "age"`
+- C: `"Lydia", 21`
+- D: `["name", "Lydia"], ["age", 21]`
+
+<details><summary><b>Відповідь</b></summary> 
+<p>
+
+#### Відповідь: B
+
+За допомогою циклу for-in ми можемо ітерувати ключі об'єкта, у цьому випадку це name та age. Під капотом ключі об'єкта завжди є рядками (якщо це не Symbol). На кожній ітерації значення змінної item дорівнює поточному ключу, який ітерується. Спочатку item дорівнює name, і він виводиться у консоль. Потім item дорівнює age, що також виводиться.
+
+</p> 
+</details>
